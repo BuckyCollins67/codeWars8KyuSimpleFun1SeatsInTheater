@@ -33,3 +33,20 @@
 
 // [output] an integer
 // The number of people who sit strictly behind you and in your column or to the left.
+
+// PREP process
+
+// P - Parameters - We will be getting four numbers.  The total number of columns, the total number of rows, the column I'm sitting in, and the row I'm sitting in.  The total number of columns and rows will be at least one, but no greater than 1000.  And my seat will be in that range.
+
+// R - Return - We're trying to figure out how many people's view we'll be interfering with by exiting left and back.  A number.  The number of the row, and the number of the column multiplied together
+
+// E - Examples - For nCols = 16, nRows = 11, col = 5 and row = 3, the output should be
+// seatsInTheater(nCols, nRows, col, row) === 96
+
+// p - Pseudocode - In plain english, this code will
+// 1. Count the number of rows behind my position
+//      peopleBehind = nrows - row
+// 2. Count the number of columns to my left (plus the one I'm in)
+//      peopleToLeft = ncol - col
+// 3. Multiply those two numbers together and return it
+//      result = peopleBehind*peopleToLeft
