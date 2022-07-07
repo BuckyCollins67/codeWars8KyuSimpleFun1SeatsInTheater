@@ -47,6 +47,12 @@
 // 1. Count the number of rows behind my position
 //      peopleBehind = nrows - row
 // 2. Count the number of columns to my left (plus the one I'm in)
-//      peopleToLeft = ncol - col
+//      peopleToLeft = 1+ ncol - col
 // 3. Multiply those two numbers together and return it
 //      result = peopleBehind*peopleToLeft
+
+function seatsInTheater(nCols, nRows, col, row){
+    let peopleBehind = (nRows - row)
+    let peopleToLeft = (1 + nCols - col)
+    return peopleBehind*peopleToLeft
+}
